@@ -1,4 +1,5 @@
 # resume.meteor
-My resume as a web app using meteor.js
 
-See robert_mohid.meteor.com
+My resume, made using meteor as a learning project.
+
+###Hosted at  [robert_mohid.meteor.com] (robert_mohid.meteor.com)
