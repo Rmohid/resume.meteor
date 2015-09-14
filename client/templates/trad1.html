@@ -1,0 +1,132 @@
+<template name="trad1">
+
+    <div class="trad1">
+        <div class="container-fluid">
+            <div class="inner-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="label label-default">Left1</span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="label label-default">Right1</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="intro-bar-wrapper">
+                        <div class="col-md-12 intro-bar">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="profile-image hidden-xs hidden-sm" src="images/profile1.png">
+                                    <img class="profile-image-mobile pull-left visible-xs visible-sm img-responsive" src="images/profile1.png">
+                                </div>
+                                <div class="col-md-6 header-text">
+                                    <h1>{{name}}</h1>
+                                    <hr>
+                                    <h4>{{address1}} - {{address2}}</h4>
+                                    <hr>
+                                    <h4><b>email:</b><a href="mailto:{{email}}"> {{email}} </a>- <b>h:</b> {{phone}}</h4>
+                                    <span class="label label-default">Intro text</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 intro-letterbox hidden-xs hidden-sm">
+                        <h3>{{summary}}</h3>
+                    </div>
+                    <div class="col-md-6 intro-letterbox-mobile visible-xs visible-sm">
+                        <h3>{{summary}}</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="spacer-letterbox">
+                            <h3>{{skills}}</h3>
+                        </div>
+                        <div class="text-right-letterbox">
+                            {{#each skillData}} {{>skillItem}} {{/each}}
+                        </div>
+                        <span class="label label-default">Right2</span>
+                        <div class="spacer-letterbox">
+                            <h3>{{education}}</h3>
+                        </div>
+                        <div class="text-right-letterbox">
+                            <h4>{{school}}</h4>
+                            <p>{{gradDate}}, {{degree}}
+                                <br>{{major}}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 spacer-bar">
+                        <h2>{{experience}}</h2>
+                        <span class="label label-default">Spacer2</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        {{#with job1}} {{>job}} {{/with}}
+                        <span class="label label-default">Left3</span>
+                    </div>
+                    <div class="col-md-6">
+                        {{#with job2}} {{>job}} {{/with}}
+                        <span class="label label-default">Right3</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 spacer-bar">
+                        <h3>{{references}}</h3>
+                        <span class="label label-default">Spacer3</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="reference-footer col-md-4">
+                        {{#with reference1}} {{>reference}} {{/with}}
+                    </div>
+                    <div class="reference-footer col-md-4">
+                        {{#with reference2}} {{>reference}} {{/with}}
+                    </div>
+                    <div class="reference-footer col-md-4">
+                        {{#with reference3}} {{>reference}} {{/with}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="job">
+    <h3> {{title}}</h3>
+    <h4>
+       {{employer}} <br>
+    {{date}}, {{location}}
+    </h4>
+    <ul>
+        {{#each jobs}}
+        <li>
+            <h5>{{title}}</h5>
+            <p>
+                {{text}}
+            </p>
+        </li>
+        {{/each}}
+    </ul>
+</template>
+
+<template name="reference">
+    <img class="reference-picture img-circle img-responsive center-block" src="{{picture}}">
+    <div class="text-center">
+        <h4> <a href="{{link}}"> {{name}}</a></h4>
+        <h5>
+       {{title}} <br>
+       {{employer}}
+    </h5>
+    </div>
+</template>
+
+<template name="skillItem">
+    <li>
+        {{text}}
+    </li>
+</template>

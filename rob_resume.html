@@ -1,0 +1,54 @@
+<head>
+    <title>Robert Mohid</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    {{>menuTop}}
+    <div class="container-resizable" id="top-frame-container">
+        {{> selectFrame}}
+    </div>
+
+</body>
+
+<template name="selectFrame">
+    <div class="container">
+        <div class="frameCarousel">
+            {{> Template.dynamic template=active data=this}}
+        </div>
+    </div>
+</template>
+
+<template name="menuTop">
+    <div class="menu-top-container">
+        <div class="nav navbar navbar-fixed-top navbar-default navbar-inverse">
+            <a class="navbar-brand" href="#">Robert Mohid</a>
+            <div class="btn-group navbar-right">
+                <button type="button" class="navbar-toggle show dropdown" data-toggle="dropdown">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="dropdown-menu">
+                   <li><a class="set-english {{languageClass 'EN'}}" href="#">EN</a> 
+                    </li>
+                    <li><a class="set-french {{languageClass 'FR'}}" href="#">FR</a> 
+                    </li>
+                    <li role="separator" class="hidden divider"></li>
+                    <li><a class="btn-template hidden" id="trad1" href="#">Traditionnal</a>
+                    </li>
+                    <li><a class="btn-template hidden" id="dynamic1" href="#">Interactive</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="https://docs.google.com/documAent/d/1QzjIhhGCmkr2BEJtKPGIoPk42nlsZmxth1B_mBazvWI/export?format=pdf"> Download PDF</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
