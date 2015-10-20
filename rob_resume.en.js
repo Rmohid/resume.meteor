@@ -70,11 +70,13 @@ var skillData = [{
 },{
    text: "Familiar with jQuery, Bootstrap.js, SASS/LESS and Meteor.js."
 },{
-   text: "Experience with Jenkins and groovyscript",
-},{
    text: "Comfortable with Git and clearcase as well as scrum/agile methodologies"
 },{
+   text: "Experience deploying applications with Docker and Git hooks."
+},{
    text: "Basic knowledge of SQL and MongoDb."
+},{
+   text: "Experience with Jenkins and groovyscript",
 }];
 
 

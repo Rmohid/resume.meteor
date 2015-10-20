@@ -70,11 +70,13 @@ var skillData = [{
 },{
    text: "Connaissance des interfaces REST avec XML ou JSON."
 },{
-   text: "jQuery, Bootstrap.js, SASS/LESS et Meteor.js."
-},{
    text: "Comfortable avec Git et clearcase, connaît les méthodologies scrum/agile."
 },{
+   text: "jQuery, Bootstrap.js, SASS/LESS et Meteor.js."
+},{
    text: "Connaissance de base du SQL et de MongoDb."
+},{
+   text: "Expérience avec le déploiment d'applications avec Docker et git hook."
 }];
 
 frenchVars = {
